@@ -1,15 +1,9 @@
 import random
-
-# Function is a set of code which only runs when it is called.                      
+                      
 def get_choice():
-    player_choice = input("Enter a choice rock, paper, scissiors: ")
-
-    # Lists: list is used to store a multiple items in a single variable. Items are stored in square[] Bracket.
+    player_choice = input("Enter a choice (rock, paper, scissiors): ")
     options = ['rock', 'paper', 'scissiors']
     computer_choice = random.choice(options) # Use of random function
-
-    # Dictionaries in python are used to store data in key and value pairs.
-    # here value can be a variable.
     choices = {
         "player": player_choice, "computer": computer_choice
     }
@@ -17,8 +11,7 @@ def get_choice():
     return choices
 
 def check_win(player, computer):
-    # print("you chose " + player + "computer chose " + computer) # Use of Concatenation
-    print(f"You chose {player}, Computer chose {computer}") # Alternate way of concatenation is use of f-string
+    print(f"You chose {player}, Computer chose {computer}") # concatenation using f-string
 
     # Use of nested IF-ELSE Condition
     if player == computer:
@@ -44,6 +37,3 @@ def check_win(player, computer):
 choices = get_choice()
 result = check_win(choices["player"], choices["computer"])
 print(result)
-
-
-# Restart with time: 47.25
